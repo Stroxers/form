@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Lektionsdemo">
+    <meta name="author" content="EPN Sverige AB">
+    <title>Lektionsdemo</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="bg-light">
+    <main>
+        <div class="container">
+            <div class="marginer">
+                <div class="row">
+
+                    <!-- main form content -->
+                    <div class="col-md-8 order-md-1">
+                        <h4 class="mb-3"><i class="fas fa-user mr-2"></i> Personlig Information</h4>
+                        <form class="needs-validation" action="accepted.html" novalidate>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="firstName">Förnamn</label>
+                                    <input id="firstName" type="text" class="form-control" required>
+                                    <div id="firstName-invalid-feedback" class="invalid-feedback">
+                                        Du måste ange ett förnamn, måste minst vara 2 bokstäver långt
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="lastName">Efternamn</label>
+                                    <input id="lastName" type="text" class="form-control" required>
+                                    <div id="lastName-invalid-feedback" class="invalid-feedback">
+                                        Du måste ange ett efternamn, måste minst vara 2 bokstäver långt
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="email">E-postadress</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="fas fa-at"></i></span>
+                                    </div>
+                                    <input id="email" type="email" class="form-control" required>
+                                    <div id="email-invalid-feedback" class="invalid-feedback">
+                                        Du måste ange en giltig e-postadress
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="password">Lösenord</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="fas fa-key"></i></span>
+                                    </div>
+                                    <input id="password" type="password" class="form-control" required>
+                                    <div id="password-invalid-feedback" class="invalid-feedback">
+                                        Du måste ange ett lösenord som är minst 8 tecken
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="confirmPassword">Bekräfta Lösenord</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="fas fa-key"></i></span>
+                                    </div>
+                                    <input id="confirmPassword" data-comparewith="#password" type="password" class="form-control"
+                                        required>
+                                    <div id="confirmPassword-invalid-feedback" class="invalid-feedback">
+                                        Du måste bekräfta lösenordet
+                                    </div>
+                                </div>
+                            </div>
+
+                            <hr class="my-5">
+
+
+                            <div id="postalAddressInformation" class="mt-5">
+                                <h4 class="mb-3"><i class="fas fa-map-marker-alt mr-2"></i> Post-/Faktureringsadress</h4>
+                                <div class="mb-3">
+                                    <label for="postalAddress">Postadress</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i class="fas fa-map-marker-alt"></i></span>
+                                        </div>
+                                        <input id="postalAddress" type="text" class="form-control" required>
+                                        <div id="postalAddress-invalid-feedback" class="invalid-feedback">
+                                            Du måste ange en postadress
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-3 mb-3">
+                                        <label for="postalCode">Postnummer</label>
+                                        <input id="postalCode" type="text" class="form-control" maxlength="5" required>
+                                        <div id="postalCode-invalid-feedback" class="invalid-feedback">
+                                            Du måste ange ett postnummer
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-9 mb3">
+                                        <label for="postalCity">Stad</label>
+                                        <select id="postalCity" class="custom-select d-block w-100" required>
+                                            <option value="">Välj stad...</option>
+                                            <option value="Stockholm">Stockholm</option>
+                                            <option value="Eskilstuna">Eskilstuna</option>
+                                            <option value="Västerås">Västerås</option>
+                                        </select>
+                                        <div id="postalCity-invalid-feedback" class="invalid-feedback">
+                                            Du måste ange en stad
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="custom-control custom-checkbox">
+                                    <input id="sameAddress" type="checkbox" class="custom-control-input">
+                                    <label for="sameAddress" class="custom-control-label">Använd annan leveransadress</label>
+                                </div>
+                            </div>
+
+
+                            <div id="deliveryAddressInformation" class="mt-5 d-none">
+                                <h4 class="mb-3"><i class="fas fa-map-marker-alt mr-2"></i> Leveransadress</h4>
+                                <div class="mb-3">
+                                    <label for="deliveryAddress">Leveransadress</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i class="fas fa-map-marker-alt"></i></span>
+                                        </div>
+                                        <input id="deliveryAddress" type="text" class="form-control delivery-address"
+                                            disabled required>
+                                        <div id="deliveryAddress-invalid-feedback" class="invalid-feedback">
+                                            Du måste ange en leveransadress
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-3 mb-3">
+                                        <label for="deliveryPostalCode">Postnummer</label>
+                                        <input id="deliveryPostalCode" type="text" class="form-control delivery-address"
+                                            disabled required>
+                                        <div id="deliveryPostalCode-invalid-feedback" class="invalid-feedback">
+                                            Du måste ange ett postnummer
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-9 mb3">
+                                        <label for="deliveryPostalCity">Stad</label>
+                                        <select id="deliveryPostalCity" class="custom-select d-block w-100 delivery-address"
+                                            disabled required>
+                                            <option value="">Välj stad...</option>
+                                            <option value="Stockholm">Stockholm</option>
+                                            <option value="Eskilstuna">Eskilstuna</option>
+                                            <option value="Västerås">Västerås</option>
+                                        </select>
+                                        <div id="deliveryPostalCity-invalid-feedback" class="invalid-feedback">
+                                            Du måste ange en stad
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr class="my-5">
+                            <div class="row">
+                                <textarea name="" class="form-control" id="txtarea" placeholder="Skriv ditt meddelande här"
+                                    maxlength="500"></textarea>
+                            </div>
+                            <hr class="my-5">
+                            <div id="paymentMethods" class="d-block my-3">
+                                <div class="custom-control custom-radio">
+                                    <input id="tos" type="radio" class="custom-control-input"
+                                        required>
+                                    <label for="tos" class="custom-control-label">Jag godkänner TOS</label>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-color2019 btn-lg btn-block">Registrera nytt medlemskap</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+
+    <script src="js/validate.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
